@@ -1,0 +1,80 @@
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+
+
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+\usepackage{settings}
+
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+
+\addbibresource{mybib.bib}
+
+
+\mynames{Pon/Ponte\bibnamedelima Ponte,
+  Wong/Lian\bibnamedelima Tze,
+  Lim/Tracy,
+  Lim/L.\bibnamedelimi T.}
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+\definecolor{SwishLineColour}{HTML}{3b3c36}
+\definecolor{MarkerColour}{HTML}{AD0F12}
+
+% Change the item prefix marker if you want
+\prefixmarker{$\diamond$}
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{lfmodern}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+
+
+
+\includecomment{fullonly}
+
+
+
+
+\leftheader{%
+  {\LARGE\bfseries Daniel Ponte Carvalho} \\
+
+  \makefield{\faEnvelope[regular]}{\href{mailto:contato@danielponte.com.br}{\texttt{contato@danielponte.com.br}}} \\
+  \makefield{\faTwitter}{\href{https://twitter.com/jusdanielponte}{\texttt{@jusdanielponte}}} \\
+  \makefield{\faLinkedin}
+  {\href{https://www.linkedin.com/in/jusdanielponte/}{\texttt{Daniel Ponte}}} \\
+  \makefield{\faGlobe}{\href{http://danielponte.com.br/}{\texttt{danielponte.com.br}}} \\
+  \makefield{\faGithub}{\href{https://github.com/DanielPonte01}{\texttt{DanielPonte01}}} \\
+}
+
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.2}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+
+\makerubric{employment}
+\makerubric{education}
+
+\input{publications}
+
+\makerubric{skills}
+\makerubric{misc}
+
+\makerubric{referee}
+
+\end{document}
